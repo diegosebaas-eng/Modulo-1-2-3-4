@@ -21,8 +21,13 @@ document.getElementById("buscar").addEventListener("click", async () => {
       <p>🌡 Temp: ${data.main.temp}°C</p>
       <p>💨 Viento: ${data.wind.speed} km/h</p>
       <p>☁️ Clima: ${data.weather[0].description}</p>
+      
+      <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Icono del clima"> 
+
     `;
   } catch (error) {
     document.getElementById("resultado").innerHTML = "⚠️ Error al conectar con la API";
   }
 });
+
+//se incluye el desafio, incluir la imagen represente el estado del clima
